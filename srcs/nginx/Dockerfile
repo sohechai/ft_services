@@ -6,7 +6,7 @@
 #    By: sofiahechaichi <sofiahechaichi@student.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/16 18:12:19 by sofiahechai       #+#    #+#              #
-#    Updated: 2020/11/24 16:03:29 by sofiahechai      ###   ########lyon.fr    #
+#    Updated: 2020/11/25 14:56:40 by sofiahechai      ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,9 +35,10 @@ RUN openssl req -x509 -nodes -days 365 -newkey rsa:2048 -subj \
 	/etc/ssl/certs/localhost.crt
 
 # conf & start
-COPY ./nginx.conf /etc/nginx/conf.d/
+COPY ./nginx.conf /etc/nginx/nginx.conf
 COPY ./start.sh /start.sh
 RUN chmod +x /start.sh
+
 EXPOSE 80 443
 
 CMD sh ./start.sh
