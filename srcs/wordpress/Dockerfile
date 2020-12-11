@@ -6,7 +6,7 @@
 #    By: sofiahechaichi <sofiahechaichi@student.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/16 18:12:19 by sofiahechai       #+#    #+#              #
-#    Updated: 2020/11/24 18:51:33 by sofiahechai      ###   ########lyon.fr    #
+#    Updated: 2020/12/01 23:07:48 by sofiahechai      ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,7 @@ RUN apk add php7-soap php7-xmlrpc php7-posix php7-mcrypt php7-gettext
 RUN apk add php7-ldap php7-ctype php7-dom
 
 
-# COPY ./wp-config.php /wp-config.php
+COPY ./wp-config.php /wp-config.php
 COPY ./nginx.conf /etc/nginx/nginx.conf
 
 COPY ./start.sh /start.sh

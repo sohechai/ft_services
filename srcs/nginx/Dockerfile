@@ -6,7 +6,7 @@
 #    By: sofiahechaichi <sofiahechaichi@student.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/16 18:12:19 by sofiahechai       #+#    #+#              #
-#    Updated: 2020/11/25 14:56:40 by sofiahechai      ###   ########lyon.fr    #
+#    Updated: 2020/11/30 20:15:53 by sofiahechai      ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,8 @@ LABEL maintainer="<sohechai@student.42lyon.fr>"
 RUN apk update
 RUN	apk add nginx
 RUN apk add openssl
+RUN apk add openssh
+RUN apk add openrc
 
 # create user and give permissions
 RUN adduser -D -g 'www' www
@@ -35,7 +37,8 @@ RUN openssl req -x509 -nodes -days 365 -newkey rsa:2048 -subj \
 	/etc/ssl/certs/localhost.crt
 
 # conf & start
-COPY ./nginx.conf /etc/nginx/nginx.conf
+COPY nginx.conf /etc/nginx/nginx.conf
+COPY index.html /www/index.html
 COPY ./start.sh /start.sh
 RUN chmod +x /start.sh
 

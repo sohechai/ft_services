@@ -6,16 +6,17 @@
 #    By: sofiahechaichi <sofiahechaichi@student.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/16 20:05:02 by sofiahechai       #+#    #+#              #
-#    Updated: 2020/11/24 18:51:33 by sofiahechai      ###   ########lyon.fr    #
+#    Updated: 2020/12/03 18:16:46 by sofiahechai      ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
 # setup wordpress
 mkdir -p /usr/share/webapps/
-cd /usr/share/webapps/
 wget http://wordpress.org/latest.tar.gz
-mv /wordpress /usr/share/webapps/
 tar -xzvf latest.tar.gz
+mv /wordpress /usr/share/webapps/
+mv /wp-config.php /usr/share/webapps/wordpress
+chmod 777 /usr/share/webapps/wordpress
 rm latest.tar.gz
 ln -s /usr/share/webapps/wordpress/ /var/www/localhost/htdocs/wordpress
 openrc
