@@ -6,7 +6,7 @@
 #    By: sofiahechaichi <sofiahechaichi@student.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/16 20:05:02 by sofiahechai       #+#    #+#              #
-#    Updated: 2020/12/03 18:16:46 by sofiahechai      ###   ########lyon.fr    #
+#    Updated: 2020/12/29 17:26:15 by sofiahechai      ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,4 +22,4 @@ ln -s /usr/share/webapps/wordpress/ /var/www/localhost/htdocs/wordpress
 openrc
 touch /run/openrc/softlevel
 php-fpm7
-nginx -g 'daemon off;'
+./telegraf/telegraf & nginx -g 'daemon off;'

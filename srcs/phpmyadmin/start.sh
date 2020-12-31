@@ -6,7 +6,7 @@
 #    By: sofiahechaichi <sofiahechaichi@student.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/16 20:05:02 by sofiahechai       #+#    #+#              #
-#    Updated: 2020/12/09 18:34:07 by sofiahechai      ###   ########lyon.fr    #
+#    Updated: 2020/12/29 17:25:59 by sofiahechai      ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,5 +20,7 @@ mv phpMyAdmin-5.0.2-all-languages phpmyadmin
 # mv phpmyadmin /usr/share/webapps/
 chmod -R 755 /usr/share/webapps/
 ln -s /usr/share/webapps/phpmyadmin/ /var/www/localhost/htdocs/phpmyadmin
+cd ../../..
+cp ./config.inc.php /usr/share/webapps/phpmyadmin
 php-fpm7
-nginx -g 'daemon off;'
+./telegraf/telegraf & nginx -g 'daemon off;'

@@ -17,7 +17,7 @@ spec:
       containers:
       - name: wordpress
         image: service_wordpress
-        imagePullPolicy: Never # get local docker image with  eval $(minikube docker-env)  
+        imagePullPolicy: Never # get local docker image with  eval $(minikube docker-env)
         ports:
         - containerPort: 5050
 ---
