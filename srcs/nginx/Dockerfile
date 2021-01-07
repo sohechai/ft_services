@@ -6,7 +6,7 @@
 #    By: sofiahechaichi <sofiahechaichi@student.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/16 18:12:19 by sofiahechai       #+#    #+#              #
-#    Updated: 2020/12/31 01:37:52 by sofiahechai      ###   ########lyon.fr    #
+#    Updated: 2020/12/31 18:03:41 by sofiahechai      ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,7 +43,6 @@ COPY ./telegraf.conf /etc/telegraf/telegraf.conf
 
 # conf & start
 COPY nginx.conf /etc/nginx/nginx.conf
-COPY proxy.conf etc/nginx/proxy.conf
 COPY index.html /www/index.html
 COPY ./start.sh /start.sh
 RUN chmod +x /start.sh
